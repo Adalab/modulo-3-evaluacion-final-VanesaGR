@@ -1,1 +1,23 @@
-/* Aquí van tus estilos */
+*{
+    background-color: lightgrey;
+    color: black;
+}
+.header{
+    background-image: url('../images/HarryPotter_Logo.jpg');
+    width: 100%;
+    height: 400px;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-form{
+    margin-top: 50px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
