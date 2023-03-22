@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const CharacterCard = ({ eachCharacter }) => {
   return (
     <dl>
-      <Link to={`/character/${eachCharacter.id}`}>
+      <NavLink to={`/character/${eachCharacter.id}`}>
         <img className='photo'
           src={//si la imagen aparece al buscar el personaje, la pone y si no, pone una por defecto
             eachCharacter.image !== ''
@@ -17,7 +17,7 @@ const CharacterCard = ({ eachCharacter }) => {
         <dd>{eachCharacter.species}</dd>
         <dd>{eachCharacter.gender}</dd>
         <dd>{eachCharacter.house}</dd>
-      </Link>
+      </NavLink>
     </dl>
   );
 };
