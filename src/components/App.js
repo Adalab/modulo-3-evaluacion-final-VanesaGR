@@ -1,8 +1,6 @@
 import '../styles/App.scss';
 import {useEffect, useState} from 'react';
 import Filters from './Filters';
-import FilterHouse from './FilterHouse';
-import FilterCharacter from './FilterCharacter';
 import CharactersList from './CharactersList';
 
 
@@ -17,6 +15,7 @@ function App(){
       .then((response) => response.json())
       .then((data) => {
         const cleanData = data.map(eachCharacter => ({             
+          id: eachCharacter.id,
           image: eachCharacter.image,       
           name: eachCharacter.name,
           alive: eachCharacter.alive,          
@@ -53,6 +52,7 @@ function App(){
           search={search}
           handleFilterSearch={handleFilterSearch}
           
+          select={select}
           handleFilterSelect={handleFilterSelect}
           ></Filters>
         

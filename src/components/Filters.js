@@ -6,7 +6,7 @@ const Filters = (props) => {
     return (
       <>
         <FilterCharacter handleFilterSearch={props.handleFilterSearch} search={props.search}></FilterCharacter>
-        <FilterHouse FilterHouse={FilterHouse} ></FilterHouse>
+        <FilterHouse handleFilterSelect={props.handleFilterSelect} select={props.select} ></FilterHouse>
       </>
     )
 };
