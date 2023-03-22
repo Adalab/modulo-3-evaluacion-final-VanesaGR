@@ -1,8 +1,8 @@
 import CharacterCard from './CharacterCard';
 
-const CharactersList = ({ FilteredCharacters }) => {
-    console.log(FilteredCharacters);
-  const listCharacter = FilteredCharacters.map((eachCharacter) => {
+const CharactersList = (props) => {
+    console.log(props.filteredCharacter);
+  const listCharacter = props.filteredCharacter.map((eachCharacter) => {
     return (
       <CharacterCard
         eachCharacter={eachCharacter}

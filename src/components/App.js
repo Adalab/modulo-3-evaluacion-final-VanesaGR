@@ -38,6 +38,12 @@ function App(){
     setSelect(value);
   }
 
+  const filteredCharacter = character.filter((eachCharacter) => {
+    return eachCharacter.name
+      .toLocaleLowerCase()
+      .includes(search.toLocaleLowerCase());
+  });
+
   return(
     <div className='container'>
       <header className='header'></header>
@@ -51,7 +57,7 @@ function App(){
           ></Filters>
         
           
-          <CharactersList FilteredCharacters={character} />
+          <CharactersList filteredCharacter={filteredCharacter} />
         </main>
       
     </div>

@@ -1,17 +1,14 @@
 function FilterCharacter(props){//filtrado de personajes por el input
     const filteredCharacters = (ev) => {
-
+        props.handleFilterSearch(ev.target.value);
     }
-    // props.characters.filter((character) => {
-    //      return character.name.toLowerCase().includes(props.filterSearch.toLowerCase());    
-    // })
-
+  
       return (
         <form className="filter-form" onSubmit={props.handleFilterSearch}>  
         <label className="input_filter"> Busqueda por Personaje </label>
         <input
         className="input_character"
-        type="search"
+        type="text"
         name="search"
         placeholder="Busca un personaje"
         onInput={filteredCharacters}
