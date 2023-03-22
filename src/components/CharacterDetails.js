@@ -1,14 +1,8 @@
-// import { useParams } from 'react-router-dom';
-
 const CharacterDetails = ({ characterSelected }) => {
-  // const { id } = useParams();
-  // const characterSelected = character.find(
-  //   (eachCharacter) => eachCharacter.id === id
-  // );
+  
   return (
-    <>
-      <h2>Detalle de contacto</h2>
-      <div class="card">
+    <div className="container-card">
+      <div className="card-detail">
         <a href=".">
           <img
             className="card__img"
@@ -16,16 +10,20 @@ const CharacterDetails = ({ characterSelected }) => {
             alt={characterSelected.name}
             title={characterSelected.name}
           ></img>
-          <h4 class="card__title">
+          <h4 className="card__title">
             {characterSelected.name}
           </h4>
-          <p className="card__alive">{characterSelected.alive}</p>
-          <p className="card__species">{characterSelected.species}</p>
-          <p className="card__gender">{characterSelected.gender}</p>
-          <p className='card__house'>{characterSelected.house}</p>
         </a>
+        <ul className="info">
+          <li className="card__alive">
+            Estatus: {characterSelected.alive === true ? 'Viv@': 'Muert@'}
+          </li>
+          <li className="card__species">Especie: {characterSelected.species}</li>
+          <li className="card__gender">Género: {characterSelected.gender}</li>
+          <li className="card__house">Casa: {characterSelected.house}</li>
+        </ul>
       </div>
-    </>
+    </div>
   );
 };
 

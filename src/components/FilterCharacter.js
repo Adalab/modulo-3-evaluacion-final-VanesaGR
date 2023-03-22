@@ -5,15 +5,15 @@ function FilterCharacter(props){//filtrado de personajes por el input
   
       return (
         <form className="filter-form" onSubmit={props.handleFilterSearch}>  
-        <label className="input_filter"> Busqueda por Personaje </label>
-        <input
-        className="input_character"
-        type="text"
-        name="search"
-        placeholder="Busca un personaje"
-        onInput={filteredCharacters}
-        value={props.search}
-      /> 
+          <label className="input_filter"> Busqueda por Personaje: </label>
+          <input
+          className="search"
+          type="text"
+          name="search"
+          placeholder="Busca un personaje"
+          onInput={filteredCharacters}
+          value={props.search}
+        /> 
       </form>
         
       );

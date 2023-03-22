@@ -10,6 +10,11 @@
     height: 650px;
 }
 
+.footer{
+    height: 200px;
+    width: 100%;
+}
+
 .main{
     display: flex;
     flex-direction: column;
@@ -18,11 +23,12 @@
 }
 
 .filter-form{
-    margin-top: 50px;
+    margin-top: 40px;
     font-weight: bold;
+    font-size: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .photo{
@@ -41,4 +47,51 @@
 
 .name{
     font-weight: bold;
+    font-size: 24px;
+}
+
+.list{
+    list-style: none;
+    text-align: center;
+}
+
+.info{
+    list-style: none;    
+}
+
+.container-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-detail{
+    border: 2px solid goldenrod;    
+    padding: 25px;
+    background-color: lightgrey;
+    margin-top: 50px;
+    width: 30em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card__title{
+    font-size: 20px;
+    text-align: center;
+}
+
+.select, .search{
+    font-size: 20px;
+}
+
+.card__img{
+    width: 200px;
+}
+
+.resetBtn{
+    margin-left:8rem;
+    font-size: 18px;
+    margin-bottom: 2rem;
 }

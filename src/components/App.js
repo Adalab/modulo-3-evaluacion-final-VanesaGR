@@ -1,3 +1,4 @@
+import '../styles/reset.scss';
 import '../styles/App.scss';
 import { useEffect, useState } from 'react';
 import Filters from './Filters';
@@ -44,6 +45,12 @@ function App() {
       .includes(search.toLocaleLowerCase());
   });
 
+  const handleClickBtn = () => { //funcion manejadora del botón para resetear los filtros y el listado
+    setCharacter('');
+    setSelect('Gryffindor');
+    window.location.reload(); //si no se pone no resetea
+  };
+
   const { pathname } = useLocation();
   const dataUrl = matchPath(`/character/:id`, pathname);
   const id = dataUrl !== null ? dataUrl.params.id : null;
@@ -64,11 +71,13 @@ function App() {
                 <Filters
                   search={search}
                   handleFilterSearch={handleFilterSearch}
-
+                
                   select={select}
                   handleFilterSelect={handleFilterSelect}
+                  
                 ></Filters>
 
+              <button className="resetBtn" type="reset" onClick={handleClickBtn}>Reset</button>            
 
                 <CharactersList filteredCharacter={filteredCharacter} />
                 
@@ -85,8 +94,11 @@ function App() {
 
         </Routes>
       </main>
-
+      <footer className='footer'>
+        {/* <img src='../../images/houses-footer-bw.png' alt="houses-footer" className='houses-footer'/> */}
+      </footer>
     </div>
+    
   );
 }
 

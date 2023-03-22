@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 const CharacterCard = ({ eachCharacter }) => {
   return (
-    <dl>
+    <ul className='list'>
       <NavLink to={`/character/${eachCharacter.id}`}>
         <img className='photo'
           src={//si la imagen aparece al buscar el personaje, la pone y si no, pone una por defecto
@@ -12,13 +12,10 @@ const CharacterCard = ({ eachCharacter }) => {
           }
           alt={`character: ${eachCharacter.name}`}
         />
-        <dt className='name'>{eachCharacter.name}</dt>
-        <dd>{eachCharacter.alive}</dd>
-        <dd>{eachCharacter.species}</dd>
-        <dd>{eachCharacter.gender}</dd>
-        <dd>{eachCharacter.house}</dd>
+        <li className='name'>{eachCharacter.name}</li>        
+        <li className='house'>{eachCharacter.house}</li>
       </NavLink>
-    </dl>
+    </ul>
   );
 };
 
