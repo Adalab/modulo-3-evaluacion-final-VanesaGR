@@ -1,3 +1,6 @@
+import heart from '../images/latidos.png';
+import grave from '../images/tumba.png';
+
 const CharacterDetails = ({ characterSelected }) => {
   
   return (
@@ -16,7 +19,19 @@ const CharacterDetails = ({ characterSelected }) => {
         </a>
         <ul className="info">
           <li className="card__alive">
-            Estatus: {characterSelected.alive === true ? 'Viv@': 'Muert@'}
+            Estatus: {characterSelected.alive === true ?
+            <div className="">
+              <p className="text-ternario">
+            'Viv@'</p>
+              <img src={heart} alt="heart" className='icon-ternario' title='heart'/>
+            </div>
+            : 
+            <div className='ternario'>
+              <p className='text-ternario'>
+            'Muert@'</p>
+              <img src={grave} alt="grave" className='icon-ternario' title='grave'/>
+            </div>
+            }
           </li>
           <li className="card__species">Especie: {characterSelected.species}</li>
           <li className="card__gender">Género: {characterSelected.gender}</li>

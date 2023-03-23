@@ -8,7 +8,7 @@ const CharacterCard = ({ eachCharacter }) => {
           src={//si la imagen aparece al buscar el personaje, la pone y si no, pone una por defecto
             eachCharacter.image !== ''
               ? eachCharacter.image
-              : `https://via.placeholder.com/210x295/E5C07B/666666/?text=${eachCharacter.name}`
+              : `https://i.pinimg.com/originals/72/c2/12/72c212937fef7953ce31385b38c15243.png`
           }
           alt={`character: ${eachCharacter.name}`}
         />

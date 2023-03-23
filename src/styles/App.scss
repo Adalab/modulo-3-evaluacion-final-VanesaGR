@@ -13,6 +13,11 @@
 .footer{
     height: 200px;
     width: 100%;
+    background-image: url('../images/houses-footer-bw.png');
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position-x: center;
+    margin-top: 50px;
 }
 
 .main{
@@ -31,6 +36,9 @@
     margin-bottom: 30px;
 }
 
+.label{
+    color: goldenrod;
+}
 .photo{
     width: 210px;
     height: 295px;
@@ -75,6 +83,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    box-shadow: 5px 5px 10px;
 }
 
 .card__title{
@@ -84,6 +93,8 @@
 
 .select, .search{
     font-size: 20px;
+    border-radius: 5px;
+    padding:2px;
 }
 
 .card__img{
@@ -91,7 +102,12 @@
 }
 
 .resetBtn{
+    width: 100px;
     margin-left:8rem;
     font-size: 18px;
     margin-bottom: 2rem;
+    padding: 0.5em;
+    color: goldenrod;
+    font-weight: bold;
+    border-radius: 5px;
 }

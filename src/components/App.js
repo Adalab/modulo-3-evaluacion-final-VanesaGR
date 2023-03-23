@@ -39,11 +39,11 @@ function App() {
     setSelect(value);
   }
 
-  const filteredCharacter = character.filter((eachCharacter) => {
+  const filteredCharacter = character.filter((eachCharacter)=>{
     return eachCharacter.name
       .toLocaleLowerCase()
-      .includes(search.toLocaleLowerCase());
-  });
+      .includes(search.toLocaleLowerCase())
+  })
 
   const handleClickBtn = () => { //funcion manejadora del botón para resetear los filtros y el listado
     setCharacter('');
@@ -51,14 +51,15 @@ function App() {
     window.location.reload(); //si no se pone no resetea
   };
 
+  filteredCharacter.sort((a,b)=> (a.name).localeCompare(b.name)); //ordena alfabéticamente
+
   const { pathname } = useLocation();
   const dataUrl = matchPath(`/character/:id`, pathname);
   const id = dataUrl !== null ? dataUrl.params.id : null;
   const characterFind = filteredCharacter.find(
     (eachCharacter) => eachCharacter.id === id
   );
-    console.log(pathname);
-    console.log(id);
+    
   return (
     <div className='container'>
       <header className='header'></header>
@@ -77,10 +78,13 @@ function App() {
                   
                 ></Filters>
 
-              <button className="resetBtn" type="reset" onClick={handleClickBtn}>Reset</button>            
+              <button className="resetBtn" type="reset" onClick={handleClickBtn}>Reset</button>   
 
+              <section>{filteredCharacter.length > 0 ? (//si no encuentra el personaje da mensaje de error
                 <CharactersList filteredCharacter={filteredCharacter} />
-                
+              ) : (`No existe el personaje ${search}` ) } 
+                </section>       
+                            
               </>
             }
           ></Route>
@@ -94,9 +98,7 @@ function App() {
 
         </Routes>
       </main>
-      <footer className='footer'>
-        {/* <img src='../../images/houses-footer-bw.png' alt="houses-footer" className='houses-footer'/> */}
-      </footer>
+      <footer className='footer'></footer>
     </div>
     
   );
