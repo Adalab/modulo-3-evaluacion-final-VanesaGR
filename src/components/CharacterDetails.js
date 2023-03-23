@@ -9,7 +9,9 @@ const CharacterDetails = ({ characterSelected }) => {
         <a href=".">
           <img
             className="card__img"
-            src={characterSelected.image}
+            src={characterSelected.image !== ''
+              ? characterSelected.image
+              : `https://i.pinimg.com/originals/72/c2/12/72c212937fef7953ce31385b38c15243.png`}
             alt={characterSelected.name}
             title={characterSelected.name}
           ></img>
@@ -19,17 +21,17 @@ const CharacterDetails = ({ characterSelected }) => {
         </a>
         <ul className="info">
           <li className="card__alive">
-            Estatus: {characterSelected.alive === true ?
+             {characterSelected.alive === true ?
             <div className="">
               <p className="text-ternario">
-            'Viv@'</p>
-              <img src={heart} alt="heart" className='icon-ternario' title='heart'/>
+            Estatus: Viv@&nbsp;&nbsp;
+              <img src={heart} alt="heart" className='icon-ternario' title='heart'/></p>
             </div>
             : 
             <div className='ternario'>
               <p className='text-ternario'>
-            'Muert@'</p>
-              <img src={grave} alt="grave" className='icon-ternario' title='grave'/>
+            Estatus: Muert@&nbsp;&nbsp;
+              <img src={grave} alt="grave" className='icon-ternario' title='grave'/></p>
             </div>
             }
           </li>
