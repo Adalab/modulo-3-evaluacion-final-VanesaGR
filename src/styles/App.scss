@@ -19,6 +19,10 @@
     background-size: 100vw;
     background-position-x: center;
     margin-top: 20px;
+
+    @media all and (min-width: 768px){
+        height: 420px;
+    }
 }
 
 .main{
@@ -26,6 +30,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media all and (min-width: 768px){
+        margin-top: 150px;
+    }
 }
 
 .filter-form{
@@ -60,6 +68,10 @@
     flex-wrap: wrap;
     gap: 4em;
     margin-left: 6.5em;
+
+    @media all and (min-width: 768px){
+        margin-left: 9em;
+    }
 }
 
 .name{
