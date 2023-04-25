@@ -10,7 +10,7 @@ function FilterCharacter(props){//filtrado de personajes por el input
     }
 
     return (
-        <form className="filter-form" onSubmit={handleSubmit}>  
+        <form className="filter-form filter-character" onSubmit={handleSubmit}>  
           <label className="label" htmlFor="search"> Busqueda por Personaje: </label>
           <input
           className="search"

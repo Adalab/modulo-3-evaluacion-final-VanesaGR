@@ -6,7 +6,7 @@ function FilterHouse(props){//filtrado por el select de las casas
 
     return(
         <>
-        <form className="filter-form" onSubmit={props.handleFilterSelect}>  
+        <form className="filter-form select-house" onSubmit={props.handleFilterSelect}>  
             <label htmlFor='selectHouse' className="label">Selecciona la casa: </label>
               <select className='select'
                 name='selectHouse'
