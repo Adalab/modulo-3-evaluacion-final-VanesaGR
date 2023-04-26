@@ -109,7 +109,8 @@
 }
 
 .card-detail{
-    border: 2px solid goldenrod;    
+    border: 2px solid goldenrod;
+    border-radius: 20px;    
     padding: 25px;
     background-color: lightgrey;
     margin-top: 50px;
@@ -139,6 +140,7 @@
 
 .card__img{
     width: 200px;
+    border-radius: 20px;
 }
 
 .resetBtn{
